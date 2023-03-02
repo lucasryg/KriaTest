@@ -1,0 +1,51 @@
+﻿@model KriaMVC.Models.Repositorio
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1 style="color:cornflowerblue">Deletar</h1>
+
+<h3 style="color:darkgrey" >Você tem certeza que deseja deletar o repositorio?</h3>
+<div>
+    <h4>Repositorio</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Linguagem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Linguagem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UltimaAtt)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UltimaAtt)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DonoRepositorio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DonoRepositorio)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="RepoId" />
+        <input type="submit" value="Deletar" class="btn btn-danger" /> |
+        <a asp-action="Index">Voltar para lista</a>
+    </form>
+</div>

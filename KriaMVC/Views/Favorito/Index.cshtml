@@ -1,0 +1,60 @@
+﻿@model IEnumerable<KriaMVC.Models.Favorito>
+
+@{
+    ViewData["Title"] = "Favorito";
+}
+
+<div class="d-flex justify-content-between pt-4">
+    <h1 style="color:cornflowerblue">Favoritos</h1>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Repo.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Repo.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Repo.Linguagem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Repo.UltimaAtt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Repo.DonoRepositorio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Repo.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Repo.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Repo.Linguagem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Repo.UltimaAtt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Repo.DonoRepositorio)
+                </td>
+                <td>
+                    <a class="btn btn-danger" asp-controller="Favorito" asp-action="DeleteFav" asp-route-id="@item.FavId">
+                        <i class="bi bi-star"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

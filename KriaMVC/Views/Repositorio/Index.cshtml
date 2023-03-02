@@ -1,0 +1,68 @@
+﻿@model IEnumerable<KriaMVC.Models.Repositorio>
+
+@{
+    ViewData["Title"] = "Repositorio";
+}
+
+<div class="d-flex justify-content-between pt-4">
+    <h1 style="color:cornflowerblue">Repositorio</h1>
+    <a class="btn btn-primary align-items-center" asp-action="Create">Novo repositorio</a>
+</div>
+
+<form method="get" asp-action="SearchByName">
+    <div class="input-group p-3 mb-2">
+        <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" placeholder="Digite o nome do repositorio que voce procura" value="@ViewData["GetRepositoryNames"]" name="strSearch" />
+        <input class="btn btn-outline-secondary" id="button-addon2" type="submit" value="Search"/>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Linguagem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UltimaAtt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonoRepositorio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Linguagem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UltimaAtt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DonoRepositorio)
+                </td>
+                <td>
+                    <a class="btn btn-primary " asp-action="Edit" asp-route-id="@item.RepoId">Editar</a> |
+                    <a class="btn btn-dark" asp-action="Details" asp-route-id="@item.RepoId">Detalhes</a> |
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.RepoId">Deletar</a>
+                    <a class="btn btn-warning" asp-action="AddFav" asp-controller="Favorito" asp-route-id="@item.RepoId"><i class="bi bi-star"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

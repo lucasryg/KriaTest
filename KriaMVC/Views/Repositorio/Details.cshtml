@@ -1,0 +1,48 @@
+﻿@model KriaMVC.Models.Repositorio
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 style="color:cornflowerblue" >Detalhes</h1>
+
+<div>
+    <h4>Repositorio</h4>
+    <hr />
+    <dl class="row d-flex justify-content-center">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Linguagem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Linguagem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UltimaAtt)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UltimaAtt)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DonoRepositorio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DonoRepositorio)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary col-1" asp-action="Edit" asp-route-id="@Model?.RepoId">Editar</a> |
+    <a asp-action="Index">Voltar para lista</a>
+</div>
