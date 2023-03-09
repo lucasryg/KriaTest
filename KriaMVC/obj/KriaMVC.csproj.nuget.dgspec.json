@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lucas\\source\\repos\\KriaMVC\\KriaMVC\\KriaMVC.csproj": {}
+    "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\KriaTest\\KriaMVC\\KriaMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lucas\\source\\repos\\KriaMVC\\KriaMVC\\KriaMVC.csproj": {
+    "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\KriaTest\\KriaMVC\\KriaMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lucas\\source\\repos\\KriaMVC\\KriaMVC\\KriaMVC.csproj",
+        "projectUniqueName": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\KriaTest\\KriaMVC\\KriaMVC.csproj",
         "projectName": "KriaMVC",
-        "projectPath": "C:\\Users\\lucas\\source\\repos\\KriaMVC\\KriaMVC\\KriaMVC.csproj",
+        "projectPath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\KriaTest\\KriaMVC\\KriaMVC.csproj",
         "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lucas\\source\\repos\\KriaMVC\\KriaMVC\\obj\\",
+        "outputPath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\KriaTest\\KriaMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -64,6 +64,14 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.12, )"
+            },
+            "bootstrap": {
+              "target": "Package",
+              "version": "[5.2.3, )"
+            },
+            "jQuery": {
+              "target": "Package",
+              "version": "[3.6.3, )"
             },
             "jQuery.UI.Combined": {
               "target": "Package",
